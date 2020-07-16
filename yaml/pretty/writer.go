@@ -110,6 +110,9 @@ func (w *baseWriter) WriteTag(v interface{}) {
 }
 
 func (w *baseWriter) WriteTagValue(k, v interface{}) {
+	if isZero(v) && w.zero == false {
+		return
+	}
 	w.WriteTag(k)
 	if isPrimative(v) {
 		w.WriteByte(' ')
@@ -162,9 +165,6 @@ func (w *indexWriter) WriteTag(v interface{}) {
 }
 
 func (w *indexWriter) WriteTagValue(k, v interface{}) {
-	if isZero(v) && w.zero == false {
-		return
-	}
 	w.WriteTag(k)
 	if isPrimative(v) {
 		w.WriteByte(' ')
