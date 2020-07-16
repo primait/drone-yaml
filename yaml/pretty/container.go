@@ -125,9 +125,9 @@ func printEnviron(w writer, v map[string]*yaml.Variable) {
 	for _, k := range keys {
 		v := v[k]
 		if v.Secret == "" {
-      w.zero := true
+      // w.zero := true
 			w.WriteTagValue(k, v.Value)
-      w.zero := false
+      // w.zero := false
 		} else {
 			w.WriteTag(k)
 			w.IndentIncrease()
