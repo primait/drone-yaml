@@ -228,8 +228,7 @@ func writeEncode(w writer, v string) {
 
 func writeValue(w writer, v interface{}) {
 	if v == nil {
-		w.WriteByte('"')
-    w.WriteByte('"')
+		w.WriteByte('~')
 		return
 	}
 	switch v := v.(type) {
