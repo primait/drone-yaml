@@ -221,8 +221,9 @@ func writeEncode(w writer, v string) {
 
 func writeValue(w writer, v interface{}) {
 	if v == nil {
-		w.Writeln("\"\"")
-    fmt.Println("writeValue: v is nil!")
+		w.WriteByte('"')
+		w.WriteByte('"')
+    	fmt.Println("writeValue: v is nil!")
 		return
 	}
 	switch v := v.(type) {
