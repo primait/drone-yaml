@@ -7,9 +7,9 @@
 package converter
 
 import (
-	"github.com/drone/drone-yaml/yaml/converter/bitbucket"
-	"github.com/drone/drone-yaml/yaml/converter/gitlab"
-	"github.com/drone/drone-yaml/yaml/converter/legacy"
+	"github.com/primait/drone-yaml/yaml/converter/bitbucket"
+	"github.com/primait/drone-yaml/yaml/converter/gitlab"
+	"github.com/primait/drone-yaml/yaml/converter/legacy"
 )
 
 // Convert converts the yaml configuration file from

@@ -20,7 +20,7 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/drone/drone-yaml/yaml"
+	"github.com/primait/drone-yaml/yaml"
 )
 
 // TODO rename WriteTag to WriteKey

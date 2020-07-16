@@ -17,7 +17,7 @@ package linter
 import (
 	"errors"
 
-	"github.com/drone/drone-yaml/yaml"
+	"github.com/primait/drone-yaml/yaml"
 )
 
 // ErrDuplicatePipelineName is returned when two Pipeline
