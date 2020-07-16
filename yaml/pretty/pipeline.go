@@ -15,6 +15,7 @@
 package pretty
 
 import (
+
 	"github.com/primait/drone-yaml/yaml"
 )
 
@@ -103,28 +104,6 @@ func printPipeline(w writer, v *yaml.Pipeline) {
 	w.WriteByte('\n')
 }
 
-func printEnviron(w writer, v map[string]*yaml.Variable) {
-	var keys []string
-	for k := range v {
-		keys = append(keys, k)
-	}
-	sort.Strings(keys)
-
-	w.WriteTag("environment")
-	w.IndentIncrease()
-	for _, k := range keys {
-		v := v[k]
-		if v.Secret == "" {
-			w.WriteTagValue(k, v.Value)
-		} else {
-			w.WriteTag(k)
-			w.IndentIncrease()
-			w.WriteTagValue("from_secret", v.Secret)
-			w.IndentDecrease()
-		}
-	}
-	w.IndentDecrease()
-}
 
 // helper function pretty prints the clone block.
 func printClone(w writer, v yaml.Clone) {
