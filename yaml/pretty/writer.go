@@ -214,7 +214,11 @@ func writeInt64(w writer, v int64) {
 }
 
 func writeEncode(w writer, v string) {
-
+  if len(v) == 0 {
+    w.WriteByte('"')
+    w.WriteByte('"')
+    return
+  }
 	if isQuoted(v) {
 		fmt.Fprintf(w, "%q", v)
 	} else {
