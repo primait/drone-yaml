@@ -7,7 +7,7 @@ package compiler
 import (
 	"testing"
 
-	"github.com/drone/drone-yaml/yaml"
+	"github.com/primait/drone-yaml/yaml"
 )
 
 func TestDind(t *testing.T) {

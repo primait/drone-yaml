@@ -37,9 +37,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2019-05-30
 ### Fixed
 - Support for yaml merge keys, by [@bradrydzewski](https://github.com/bradrydzewski).
-- Improve how colon characters are escaped, by [@bradrydzewski](https://github.com/bradrydzewski). Issue [#45](https://github.com/drone/drone-yaml/issues/45).
-- Improve how pipe and caret characters are escaped, by [@bradrydzewski](https://github.com/bradrydzewski). Issue [#44](https://github.com/drone/drone-yaml/issues/44).
-- Error when empty document or missing kind attribute, by [@bradrydzewski](https://github.com/bradrydzewski). Issue [#42](https://github.com/drone/drone-yaml/issues/42).
+- Improve how colon characters are escaped, by [@bradrydzewski](https://github.com/bradrydzewski). Issue [#45](https://github.com/primait/drone-yaml/issues/45).
+- Improve how pipe and caret characters are escaped, by [@bradrydzewski](https://github.com/bradrydzewski). Issue [#44](https://github.com/primait/drone-yaml/issues/44).
+- Error when empty document or missing kind attribute, by [@bradrydzewski](https://github.com/bradrydzewski). Issue [#42](https://github.com/primait/drone-yaml/issues/42).
 
 ## [1.0.9] - 2019-05-20
 ### Added
