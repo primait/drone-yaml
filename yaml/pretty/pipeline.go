@@ -43,6 +43,10 @@ func printPipeline(w writer, v *yaml.Pipeline) {
 		printWorkspace(w, v.Workspace)
 	}
 
+	if len(v.Environment) > 0 {
+		printEnviron(w, v.Environment)
+	}
+
 	if len(v.Steps) > 0 {
 		w.WriteTag("steps")
 		for _, step := range v.Steps {
@@ -95,11 +99,6 @@ func printPipeline(w writer, v *yaml.Pipeline) {
 		printDependsOn(w, v.DependsOn)
 		w.WriteByte('\n')
 	}
-
-	if len(v.Environment) > 0 {
-		printEnviron(w, v.Environment)
-	}
-
 
 	w.WriteByte('\n')
 }
