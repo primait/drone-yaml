@@ -149,6 +149,9 @@ func (w *indexWriter) ExcludeZero() {
 }
 
 func (w *indexWriter) WriteTag(v interface{}) {
+  if isZero(v) && w.zero == false {
+		return
+	}
 	w.WriteByte('\n')
 	if w.index == 0 {
 		w.IndentDecrease()
@@ -226,6 +229,7 @@ func writeEncode(w writer, v string) {
 func writeValue(w writer, v interface{}) {
 	if v == nil {
 		w.WriteByte('~')
+    fmt.Println("writeValue: v is nil!")
 		return
 	}
 	switch v := v.(type) {

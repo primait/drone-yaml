@@ -15,7 +15,6 @@
 package yaml
 
 import (
-	"fmt"
 	"bufio"
 	"bytes"
 	"errors"
@@ -93,10 +92,6 @@ func parseRaw(r *RawResource) (Resource, error) {
 		obj = new(Pipeline)
 	}
 	err := yaml.Unmarshal(r.Data, obj)
-	switch r.Kind {
-	case "pipeline":
-		fmt.Println("pipeline: %s", r.Data)
-	}
 	return obj, err
 }
 
