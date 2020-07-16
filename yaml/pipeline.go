@@ -22,17 +22,19 @@ type Pipeline struct {
 	Type    string `json:"type,omitempty"`
 	Name    string `json:"name,omitempty"`
 
-	Clone       Clone             `json:"clone,omitempty"`
-	Concurrency Concurrency       `json:"concurrency,omitempty"`
-	DependsOn   []string          `json:"depends_on,omitempty" yaml:"depends_on" `
-	Node        map[string]string `json:"node,omitempty" yaml:"node"`
-	Platform    Platform          `json:"platform,omitempty"`
-	PullSecrets []string          `json:"image_pull_secrets,omitempty" yaml:"image_pull_secrets"`
-	Services    []*Container      `json:"services,omitempty"`
-	Steps       []*Container      `json:"steps,omitempty"`
-	Trigger     Conditions        `json:"trigger,omitempty"`
-	Volumes     []*Volume         `json:"volumes,omitempty"`
-	Workspace   Workspace         `json:"workspace,omitempty"`
+	Clone       Clone             		`json:"clone,omitempty"`
+	Environment map[string]*Variable	`json:"environment,omitempty"`
+	Concurrency Concurrency       		`json:"concurrency,omitempty"`
+	DependsOn   []string          		`json:"depends_on,omitempty" yaml:"depends_on" `
+	Node        map[string]string 		`json:"node,omitempty" yaml:"node"`
+	Platform    Platform          		`json:"platform,omitempty"`
+	PullSecrets []string          		`json:"image_pull_secrets,omitempty" yaml:"image_pull_secrets"`
+	Services    []*Container      		`json:"services,omitempty"`
+	Steps       []*Container      		`json:"steps,omitempty"`
+	Trigger     Conditions        		`json:"trigger,omitempty"`
+	Volumes     []*Volume         		`json:"volumes,omitempty"`
+	Workspace   Workspace         		`json:"workspace,omitempty"`
+	
 }
 
 // GetVersion returns the resource version.
