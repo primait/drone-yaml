@@ -149,9 +149,6 @@ func (w *indexWriter) ExcludeZero() {
 }
 
 func (w *indexWriter) WriteTag(v interface{}) {
-  if isZero(v) && w.zero == false {
-		return
-	}
 	w.WriteByte('\n')
 	if w.index == 0 {
 		w.IndentDecrease()
@@ -168,6 +165,9 @@ func (w *indexWriter) WriteTag(v interface{}) {
 }
 
 func (w *indexWriter) WriteTagValue(k, v interface{}) {
+  if isZero(v) && w.zero == false {
+		return
+	}
 	w.WriteTag(k)
 	if isPrimative(v) {
 		w.WriteByte(' ')
