@@ -149,9 +149,6 @@ func (w *indexWriter) ExcludeZero() {
 }
 
 func (w *indexWriter) WriteTag(v interface{}) {
-  if isZero(v) && w.zero == false {
-		return
-	}
 	w.WriteByte('\n')
 	if w.index == 0 {
 		w.IndentDecrease()
