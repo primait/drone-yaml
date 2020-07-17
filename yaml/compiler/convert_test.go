@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/drone/drone-runtime/engine"
-	"github.com/primait/drone-yaml/yaml"
 	"github.com/google/go-cmp/cmp"
+	"github.com/primait/drone-yaml/yaml"
 )
 
 func Test_toIgnoreErr(t *testing.T) {

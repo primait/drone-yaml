@@ -22,7 +22,7 @@ import (
 )
 
 func TestQuoted(t *testing.T) {
-	tests := []struct{
+	tests := []struct {
 		before, after string
 	}{
 		{"", `""`},

@@ -76,7 +76,7 @@ func TestConvert(t *testing.T) {
 }
 
 func TestWorkspacePath(t *testing.T) {
-	tests := []struct{
+	tests := []struct {
 		a string
 		b string
 	}{
